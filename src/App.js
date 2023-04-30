@@ -5,7 +5,7 @@ import parse from "date-fns/parse"
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"
 
@@ -22,27 +22,31 @@ const localizer = dateFnsLocalizer( {
   locales
 })
 
-const events = [
-  {title: "Exams",
-  start: new Date(2023, 2, 21),
-  end: new Date(2023, 2, 23)
-  },
-  {title: "Meeting",
-  start: new Date(2023, 2, 29),
-  end: new Date(2023, 2, 29)
-  },
-  {title: "Workshop",
-  start: new Date(2023, 2, 26),
-  end: new Date(2023, 2, 26)
-  },
-]
 function App() {
   const[newEvent, setNewEvent] = useState({title: "", start: "", end:""})
-  const[allEvents, setAllEvents] = useState(events)
+  const[allEvents, setAllEvents] = useState([])
+
+  useEffect(() => {
+    fetch('/api/events')
+      .then(response => response.json())
+      .then(data => setAllEvents(data))
+  }, [])
 
   function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent])
+    fetch('/api/events', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newEvent)
+    })
+    .then(response => response.json())
+    .then(data => {
+      setAllEvents([...allEvents, data])
+      setNewEvent({title: "", start: "", end:""})
+    })
   }
+
   return (
     <div className="App">
       <h1>Calendar</h1>
@@ -59,12 +63,11 @@ function App() {
         />
         <button style = {{marginTop: "10px"}} onClick={handleAddEvent}>Add Event</button>
       </div>
-      <Calendar localizer ={localizer} events={events}
+      <Calendar localizer ={localizer} events={allEvents}
       startAccessor="start" endAccessor = "end" style = {{height: 500, margin: "50px"}} 
       />
     </div>
   );
 }
-
 
 export default App;
