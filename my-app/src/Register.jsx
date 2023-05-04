@@ -20,7 +20,8 @@ export const Register = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
+        window.location.href = 'https://linktr.ee/illinois_';
+        //window.location.href = 'my-app/src/calendar.html';
     }
 
     return (
