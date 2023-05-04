@@ -22,8 +22,8 @@ export const Login = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //window.location.href = 'https://www.illinois.edu';
-        window.location.href = '/calendar.html';
+        window.location.href = 'https://www.illinois.edu';
+        //window.location.href = '/calendar.html';
     }
 
     return (
