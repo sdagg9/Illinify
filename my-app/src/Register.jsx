@@ -20,7 +20,7 @@ export const Register = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        window.location.href = 'calendar.html';
+        window.location.href = './my-app/src/calendar.html';
     }
 
     return (
