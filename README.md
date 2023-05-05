@@ -2,7 +2,8 @@
 
 # Authors
 Shreenija Daggavolu <br />
-Vasudha Das
+Vasudha Das <br /> 
+Rishit C
 
 Mentor: Ray Han
 
