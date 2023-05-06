@@ -16,7 +16,15 @@ Our application is designed to help students stay organized and on top of their 
 - Users can keep track of their schedule in a calendar
 
 # Installation 
-First, nstall the required packages by running npm install. To run the app, type npm start in the terminal.
+First, nstall the required packages by running npm install. In the terminal, you can run:
+
+```npm start```
+Open http://localhost:3000 to view it in your browser.
+
+# Technical Architecture
+
+<img width="511" alt="image" src="https://user-images.githubusercontent.com/113925197/236646939-09595e4a-963f-4ed7-81fe-7e05ef14304e.png">
+
 
 # Roles
-Shreenija and Vasudha worked on the frontend portion of the website. This included creating a user authentication log-in / sign-up page that leads the user to some of the other pages such as the calendar, ...
+Shreenija and Vasudha worked on the frontend portion of the website. This included creating a user authentication log-in / sign-up page that leads the user to some of the other pages such as the calendar for scheduling and the resource page. Rishit worked on the backend software to store the data inputted by the user.
