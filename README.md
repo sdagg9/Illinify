@@ -16,9 +16,12 @@ Our application is designed to help students stay organized and on top of their 
 - Users can keep track of their schedule in a calendar
 
 # Installation 
-First, nstall the required packages by running npm install. In the terminal, you can run:
-
+First, install the required packages by running:
+```npm install```
+<br />
+In the terminal, you can run:
 ```npm start```
+<br />
 Open http://localhost:3000 to view it in your browser.
 
 # Technical Architecture
