@@ -1,12 +1,3 @@
-# Team85
-
-# Authors
-Shreenija Daggavolu <br />
-Vasudha Das <br /> 
-Rishit C
-
-Mentor: Ray Han
-
 # About
 Our application is designed to help students stay organized and on top of their assignments and classes. Our app brings multiple providers together into one user interface, making it easier to organize everything for assignments and classes. This application includes a sign-up page, followed by a calendar to allow students to input their schedule. For this app, we used ReactJS and Flask as our frontend and backend.
 
@@ -27,7 +18,3 @@ Open http://localhost:3000 to view it in your browser.
 # Technical Architecture
 
 <img width="511" alt="image" src="https://user-images.githubusercontent.com/113925197/236646939-09595e4a-963f-4ed7-81fe-7e05ef14304e.png">
-
-
-# Roles
-Shreenija and Vasudha worked on the frontend portion of the website. This included creating a user authentication log-in / sign-up page that leads the user to some of the other pages such as the calendar for scheduling and the resource page. Rishit worked on the backend software to store the data inputted by the user.
